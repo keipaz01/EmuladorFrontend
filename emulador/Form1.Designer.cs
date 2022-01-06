@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLista));
             this.dgvRoms = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lvlVistaPrevia = new System.Windows.Forms.Label();
@@ -42,10 +43,12 @@
             this.dgvRoms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRoms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRoms.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRoms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoms.Location = new System.Drawing.Point(202, 38);
             this.dgvRoms.Name = "dgvRoms";
+            this.dgvRoms.ReadOnly = true;
             this.dgvRoms.Size = new System.Drawing.Size(433, 382);
             this.dgvRoms.TabIndex = 0;
             // 
@@ -61,7 +64,7 @@
             // lvlVistaPrevia
             // 
             this.lvlVistaPrevia.AutoSize = true;
-            this.lvlVistaPrevia.Location = new System.Drawing.Point(13, 73);
+            this.lvlVistaPrevia.Location = new System.Drawing.Point(13, 89);
             this.lvlVistaPrevia.Name = "lvlVistaPrevia";
             this.lvlVistaPrevia.Size = new System.Drawing.Size(65, 13);
             this.lvlVistaPrevia.TabIndex = 1;
@@ -79,7 +82,7 @@
             // 
             // btnEjecutar
             // 
-            this.btnEjecutar.Location = new System.Drawing.Point(16, 12);
+            this.btnEjecutar.Location = new System.Drawing.Point(16, 21);
             this.btnEjecutar.Name = "btnEjecutar";
             this.btnEjecutar.Size = new System.Drawing.Size(164, 38);
             this.btnEjecutar.TabIndex = 3;
@@ -97,8 +100,10 @@
             this.Controls.Add(this.lvlVistaPrevia);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvRoms);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLista";
             this.Text = "Lista";
+            this.Load += new System.EventHandler(this.frmLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picJuegos)).EndInit();
             this.ResumeLayout(false);
